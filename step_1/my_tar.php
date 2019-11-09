@@ -1,7 +1,7 @@
 #!/usr/bin/php 
 <?php
 $branche = array();			   //Structure des Dossier.
-$Nom_Archive = "output.mytar";//Nom de Sortie.
+$Nom_Archive = "output1.mytar";//Nom de Sortie.
 $jsonArray = array();        //Intégration du tableau en json.
 var_dump($Fichier_Array = $argv);     //Stockage des fichier dans un tableau.
 $erreur = "";			   //Stockage des erreurs dans une variable spécifique.
@@ -35,7 +35,7 @@ function list_files_folders($Fichier_Array)
 		}
 
 	}
-	return $tree; // On retourne le tableau avec les path des fichier.
+	return $branche; // On retourne le tableau avec les path des fichier.
 }
 
 function scan_folder($directory) // Scan du dossier courant.
@@ -75,7 +75,7 @@ function branche_to_json($branche, $jsonArray) //Créé un tableau de style json
 		$fileContents = file_get_contents($file);//Récupère le contenu des fichier dans le tableau.
 		$path = array_splice($tmp, 0,-1); // efface et remplace tous les éléments du tableau. 
 		$path = implode('/', $path);
-		$jsonArray[] = array('name' => $filename, 'path' => $path, 'contenu' => $fileContents);
+		$jsonArray[] = array('name' => $fileName, 'path' => $path, 'contenu' => $fileContents);
 	}
 	return $jsonArray;
 }
