@@ -1,10 +1,10 @@
 #!/usr/bin/php 
 <?php
-$branche = array();			   //Structure des Dossier.
-$Nom_Archive = "output.mytar";//Nom de Sortie.
-$jsonArray = array();        //Intégration du tableau en json.
-var_dump($Fichier_Array = $argv);     //Stockage des fichier dans un tableau.
-$erreur = "";			   //Stockage des erreurs dans une variable spécifique.
+$branche = array();			             //Structure des Dossier.					   \\
+$Nom_Archive = "output.mytar";          //Nom de Sortie.		 				 		\\
+$jsonArray = array();                  //Intégration du tableau en json.				 \\
+var_dump($Fichier_Array = $argv);     //Stockage des fichier dans un tableau.			  \\	
+$erreur = "";			             //Stockage des erreurs dans une variable spécifique.  \\
 if (empty($Fichier_Array))
 {
 	echo "Veuillez entrez le nom des fichiers à archiver.\n";
