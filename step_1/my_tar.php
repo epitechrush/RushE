@@ -3,7 +3,7 @@
 $branche = array();			   //Structure des Dossier.
 $Nom_Archive = "output.mytar";//Nom de Sortie.
 $jsonArray = array();        //Intégration du tableau en json.
-$Fichier_Array = $argv;     //Stockage des fichier dans un tableau.
+var_dump($Fichier_Array = $argv);     //Stockage des fichier dans un tableau.
 $erreur = "";			   //Stockage des erreurs dans une variable spécifique.
 if (empty($Fichier_Array))
 {
@@ -14,7 +14,9 @@ else if (count($Fichier_Array) < 1)
 {
 	echo "Veuillez insérer au moins un dossier.\n";
 }
-
+$branche = list_files_folders($Fichier_Array);
+$jsonArray = branche_to_json($branche,$jsonArray);
+$Nom_Archive = AddFilesToArchive($Nom_Archive,$jsonArray);
 function list_files_folders($Fichier_Array)
 {
 	global $branche; // Je donne l'accès a ces nouvelles valeur.
