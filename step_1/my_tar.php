@@ -1,7 +1,7 @@
 #!/usr/bin/php 
 <?php
 $branche = array();			   //Structure des Dossier.
-$Nom_Archive = "output1.mytar";//Nom de Sortie.
+$Nom_Archive = "output.mytar";//Nom de Sortie.
 $jsonArray = array();        //Intégration du tableau en json.
 var_dump($Fichier_Array = $argv);     //Stockage des fichier dans un tableau.
 $erreur = "";			   //Stockage des erreurs dans une variable spécifique.
@@ -31,7 +31,7 @@ function list_files_folders($Fichier_Array)
 		}
 		else
 		{
-			$erreur = "Erreur : $file n'existe pas !";
+			echo "Erreur : $file n'existe pas !";
 		}
 
 	}
@@ -62,7 +62,7 @@ function scan_folder($directory) // Scan du dossier courant.
 function createArchive($name) // Préparation à la création de l'archive.
 {
 	fopen($name,'a'); // Ouverture du fichier en ecriture et place le pointeur à la fin du fichier.
-	$erreur =  "Création de l'archive : " . $name . "\n";
+	echo  "Création de l'archive : " . $name . "\n";
 	return true;
 }
 
@@ -84,10 +84,10 @@ function AddFilesToArchive($Nom_Archive,$jsonArray) //Préparation des fichier p
 {
 	createArchive($Nom_Archive);
 	foreach ($jsonArray as $file) {
-		$erreur =  "Ajout du fichier : " .$file['name'] . "\n";
+		echo  "Ajout du fichier : " .$file['name'] . "\n";
 		file_put_contents($Nom_Archive, utf8_encode(json_encode($jsonArray)));
 	}
-	$erreur = "Fin de l'archivage de vos fichier !\n";
+	echo "Fin de l'archivage de vos fichier !\n";
 	return $Nom_Archive;
 }
 
@@ -97,7 +97,7 @@ function AddFilesToArchive($Nom_Archive,$jsonArray) //Préparation des fichier p
 	$tmp = "";
 	if(file_put_contents($Nom_Archive, $tmp))
 	{
-		$erreur = "Compression terminée avec succès !";
+		echo "Compression terminée avec succès !";
 		return true;
 	}
 	else
