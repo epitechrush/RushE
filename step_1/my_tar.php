@@ -3,7 +3,7 @@
 //my_tar
 $tree = array();
 $name_archive = "output.mytar"; 
-$jsonArray = array():
+$jsonArray = array();
 $filesArray = $argv;
 array_splice($filesArray, 0,1); // supprime les éléments désignés par 0 et 1 du tableau 
 
