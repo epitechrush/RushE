@@ -56,7 +56,7 @@ function scan_folder($directory) // Scan du dossier courant.
 			}
 		}
 	}
-	return $tree;
+	return $branche;
 }
 
 function createArchive($name) // Préparation à la création de l'archive.
