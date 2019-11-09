@@ -1,18 +1,93 @@
-.namefolder{
-    margin-top: 20px;
-    margin-left: 150px;
+html
+{
+    background-image: url(https://static.hitek.fr/img/actualite/2017/02/13/dragon-ball-wallpaper-640x960.jpg);
 }
 
+
+/*.content
+{
+    position:relative;
+    text-align: center;
+    color:#FFF;
+    background-color: grey;
+    opacity:0.5;
+    height: 600px;
+    width:550px;
+    padding: 20px;
+    top:80px;
+    margin-top:20px;
+    margin: 0 auto;
+    border-radius:25px;
+}*/
+
+.namefolder1
+{
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    top: -10px;
+    width: 382px;
+    background-color: grey;
+    opacity: 0.5;
+    padding: 7px;
+    box-shadow: 10px 10px 15px 0px;
+    border-radius: 25px;
+}
+
+
 .dropzone {
-    width: 300px;
-    height: 300px;
+    position: relative;
+    width: 400px;
+    height: 200px;
     border: 2px dashed #ccc;
-    color: #ccc;
     line-height: 300px;
     text-align: center;
+    background-color:grey;
+    opacity: 0.5;
+    border-radius: 25px;
+    box-shadow: 10px 10px 15px 0px; 
 }
 
 .dropzone.dragover {
     border-color:#000;
     color:#000;
 }
+
+.centrer
+{
+    position: relative;
+    margin-left: auto;
+    left: 400px;
+}
+
+.bouton 
+{
+    background-color:  #889fe4;
+    box-shadow: 5px 5px 0px 0px;
+    padding: 5px;
+    border-radius: 9px;
+    font-size: 18px;
+}
+
+
+
+label
+{
+    margin-left: 50;
+}
+
+tr
+{
+    position: relative;
+    font-size: 20px;
+    top: 15px;
+}
+
+#multiple
+{
+    position: relative;
+    padding: 15px;
+    left: -22px;
+    margin: 10px;
+}
+
