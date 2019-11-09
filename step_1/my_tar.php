@@ -81,7 +81,7 @@ function branche_to_json($branche, $jsonArray) //Créé un tableau de style json
 function AddFilesToArchive($Nom_Archive,$jsonArray) //Préparation des fichier pour compression.
 {
 	createArchive($Nom_Archive);
-	foreach ($jsonArray as $$file) {
+	foreach ($jsonArray as $file) {
 		$erreur =  "Ajout du fichier : " .$file['name'] . "\n";
 		file_put_contents($Nom_Archive, utf8_encode(json_encode($jsonArray)));
 	}
