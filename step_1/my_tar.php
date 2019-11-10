@@ -91,19 +91,6 @@ function AddFilesToArchive($Nom_Archive,$jsonArray) //Préparation des fichier p
 	return $Nom_Archive;
 }
 
-/*function compress($Nom_Archive)
-{
-	$tmp = file_get_contents($Nom_Archive);
-	$tmp = "";
-	if(file_put_contents($Nom_Archive, $tmp))
-	{
-		echo "Compression terminée avec succès !";
-		return true;
-	}
-	else
-	{
-		$erreur = "Une erreur s'est produite... Veuillez réessayer un peu plus tard";
-		return false;
-	}
-}*/
+
+
 ?>
